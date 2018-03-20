@@ -1,4 +1,4 @@
-import Vue from 'vune'
+import Vue from 'vue'
 
 const defaultData = {
   result: undefined,
@@ -32,8 +32,7 @@ class MappedPromise {
       () => this.params.skip.call(this.vm, this.vm),
       (skipped, prevSkipped) => {
         if (skipped !== prevSkipped) {
-          Object.extend(this.data, {
-            ...defaultData,
+          Object.extend(this.data, defaultData, {
             skipped: skipped
           })
           if (skipped) {
@@ -88,7 +87,7 @@ class MappedPromise {
 
   getProxy () {
     const fields = {}
-    for (const propName of proxyProps) {
+    proxyProps.forEach(propName => {
       fields[propName] = {
         configurable: false,
         enumerable: true,
@@ -97,7 +96,7 @@ class MappedPromise {
           throw new Error('')
         }
       }
-    }
+    })
     return Object.create(null, fields)
   }
 }
