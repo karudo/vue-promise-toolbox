@@ -18,7 +18,7 @@ class MappedPromise {
     this.vm = vm
     this.params = params
     this.data = new Vue({
-      data: () => defaultData
+      data: () => Object.assign({}, defaultData)
     })
     if (this.params.skip) {
       this.initSkip()
