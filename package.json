@@ -1,0 +1,23 @@
+{
+  "name": "vue-promise-toolbox",
+  "version": "0.0.2",
+  "main": "dist/vue-promise-toolbox.cjs.js",
+  "module": "dist/vue-promise-toolbox.esm.js",
+  "dependencies": {},
+  "devDependencies": {
+    "rollup": "^0.57.0",
+    "vue": "^2.5.16"
+  },
+  "peerDependencies": {
+    "vue": "^2.0.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test/test.js",
+    "pretest": "npm run build"
+  },
+  "files": [
+    "dist"
+  ]
+}
