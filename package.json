@@ -1,6 +1,6 @@
 {
   "name": "vue-promise-toolbox",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/vue-promise-toolbox.cjs.js",
   "module": "dist/vue-promise-toolbox.esm.js",
   "repository" :

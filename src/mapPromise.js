@@ -32,7 +32,7 @@ class MappedPromise {
       () => this.params.skip.call(this.vm, this.vm),
       (skipped, prevSkipped) => {
         if (skipped !== prevSkipped) {
-          Object.extend(this.data, defaultData, {
+          Object.assign(this.data, defaultData, {
             skipped: skipped
           })
           if (skipped) {
